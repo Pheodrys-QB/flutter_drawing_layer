@@ -1,4 +1,4 @@
-import 'package:drawing_layer/drawing_page.dart';
+import 'package:drawing_layer/landing.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class _DrawingApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const DrawingPage()
+      home: const LandingPage()
     );
   }
 }
