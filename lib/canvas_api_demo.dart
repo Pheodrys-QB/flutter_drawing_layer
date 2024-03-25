@@ -24,36 +24,39 @@ class CanvasAPI_demo extends StatelessWidget {
 class LogoPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    double xCenter = size.width / 2;
-    double yCenter = size.height / 2;
+    double xCenter = size.width / 2 - 50;
+    double yCenter = size.height / 2 - 100;
 
     // Rect boundingBox = Rect.fromCenter(
-    //     center: Offset(xCenter, yCenter), width: 150, height: 150);
+    //     center: Offset(xCenter, yCenter), width: 500, height: 500);
+    // canvas.drawRect(Rect.fromLTWH(xCenter-50, yCenter+50, 200, 100), Paint()..color=Colors.orange);
+
     // canvas.saveLayer(
     //     boundingBox, Paint()..color = Colors.transparent.withOpacity(0.5));
-    // canvas.drawRect(Rect.fromLTWH(xCenter, yCenter, 100, 200), Paint()..color=Colors.red);
+
+    // canvas.drawRect(Rect.fromLTWH(xCenter - 25, yCenter-25, 100, 200), Paint()..color=Colors.red);
     // canvas.drawRect(Rect.fromLTWH(xCenter, yCenter, 100, 200), Paint()..color=Colors.blue);
-    // canvas.drawRect(Rect.fromLTWH(xCenter, yCenter, 100, 200), Paint()..color=Colors.green);
+    // canvas.drawRect(Rect.fromLTWH(xCenter+25, yCenter+25, 100, 200), Paint()..color=Colors.green);
     // canvas.restore();
 
     canvas.drawRect(Rect.fromLTWH(xCenter - 25, yCenter - 25, 100, 200),
         Paint()..color = Colors.red.withOpacity(0.5));
 
-    // canvas.save();
+    canvas.save();
 
     // canvas.translate(50, 10);
     // canvas.rotate(0.5);
-    // canvas.skew(50, 0);
-    // canvas.scale(2);
+    // canvas.skew(-0.2, 0);
+    // canvas.scale(0.5);
 
     // Matrix4 matrix = Matrix4.identity();
-    // matrix.setEntry(3, 0, 0.001);
+    // matrix.setEntry(3, 0, 0.002);
     // canvas.transform(matrix.storage);
 
     canvas.drawRect(Rect.fromLTWH(xCenter, yCenter, 100, 200),
         Paint()..color = Colors.blue.withOpacity(0.5));
 
-    // canvas.restore();
+    canvas.restore();
 
     canvas.drawRect(Rect.fromLTWH(xCenter + 25, yCenter + 25, 100, 200),
         Paint()..color = Colors.green.withOpacity(0.5));

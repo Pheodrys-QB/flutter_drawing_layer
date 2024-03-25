@@ -11,11 +11,12 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPage extends State<LandingPage> {
   final ButtonStyle style = ElevatedButton.styleFrom(
-      textStyle: const TextStyle(fontSize: 20), fixedSize: const Size(200, 40));
+      textStyle: const TextStyle(fontSize: 20), fixedSize: const Size(250, 40));
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Scaffold(
+        body: Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
@@ -38,10 +39,10 @@ class _LandingPage extends State<LandingPage> {
                   MaterialPageRoute(
                       builder: ((context) => const CanvasAPI_demo())));
             },
-            child: const Text('Canvas API demo'),
+            child: const Text('Canvas API '),
           ),
         ],
       ),
-    );
+    ));
   }
 }
